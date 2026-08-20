@@ -257,4 +257,4 @@ MIT License — feel free to use this project as a template for your own sensor 
 ## 👤 Author
 
 **Cameron** — [@MYDUSTYVISION](https://github.com/MYDUSTYVISION)
-**Claude:Fabel** - Dabugging and notation
+**Claude:Sonnet 4.6** - Dabugging and notation
