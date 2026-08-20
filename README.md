@@ -1,5 +1,5 @@
 # 🥧 Pi Weather ETL Pipeline
-> A end-to-end data engineering pipeline that collects real-time attic environmental data using a Raspberry Pi Sense HAT, processes it through AWS Lambda, stores it in PostgreSQL, and visualizes it through Grafana and a custom React dashboard.
+> A end-to-end data engineering pipeline that collects real-time attic environmental data using a Raspberry Pi Sense HAT, processes it through AWS Lambda, stores it in PostgreSQL, and visualizes it through Grafana.
 
 ---
 
