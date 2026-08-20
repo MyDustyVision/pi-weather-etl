@@ -1,0 +1,19 @@
+# Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+lambda_build/
+lambda_reader_build/
+*.zip
+
+# Node
+node_modules/
+dist/
+.netlify/
+
+# Mac
+.DS_Store

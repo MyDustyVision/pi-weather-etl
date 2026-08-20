@@ -1,0 +1,1 @@
+{"statusCode": 201, "headers": {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"}, "body": "{\"status\": \"ok\", \"id\": 1, \"temp_f\": 72.5, \"pressure_inhg\": 29.9213, \"humidity_pct\": 55.0, \"dew_point_c\": 13.01}"}
