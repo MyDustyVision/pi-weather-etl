@@ -6,7 +6,6 @@
 ## 📸 Dashboard Preview
 
 ![Grafana Dashboard](docs/grafana_screenshot.png)
-![React Dashboard](docs/react_screenshot.png)
 
 ---
 
@@ -52,19 +51,9 @@
          ├──────────────────────────────────┐
          ▼                                  ▼
 ┌─────────────────────┐        ┌────────────────────┐
-│  Grafana Cloud      │        │  React Dashboard   │
-│  (Time Series)      │        │  (Netlify)         │
+│  Grafana Cloud      │        │  ntfy.sh Alerts    │
+│  (Time Series)      │        │  (Phone Push)      │
 └─────────────────────┘        └────────────────────┘
-         │
-         ▼
-┌─────────────────────┐
-│  ntfy.sh Alerts     │
-│  (Phone Push)       │
-│                     │
-│  • Humidity spike   │
-│  • Temp spike       │
-│  • Fire risk        │
-└─────────────────────┘
 ```
 
 ---
@@ -79,8 +68,7 @@
 | API | AWS API Gateway (HTTP API) |
 | Database | Neon PostgreSQL (Serverless) |
 | Monitoring | AWS CloudWatch |
-| Visualization | Grafana Cloud, React + Recharts |
-| Hosting | Netlify |
+| Visualization | Grafana Cloud |
 | Alerting | ntfy.sh (push notifications) |
 | Version Control | Git + GitHub |
 
@@ -175,14 +163,10 @@ crontab -e
 # Add: */30 * * * * /bin/bash -c 'source ~/.sensor_env && python3 ~/collector.py >> ~/sensor_collector.log 2>&1'
 ```
 
-### 4. Dashboard
-```bash
-cd dashboard
-npm install
-npm run dev     # local development
-npm run build   # production build
-netlify deploy --prod --dir=dist
-```
+### 4. Grafana
+1. Create free account at grafana.com
+2. Add PostgreSQL data source using Neon connection details
+3. Import dashboard and start visualizing
 
 ---
 
@@ -199,9 +183,6 @@ pi-weather-etl/
 │   └── deploy_lambda.sh    # Deployment script
 ├── database/
 │   └── schema.sql          # PostgreSQL schema + views
-├── dashboard/
-│   └── src/
-│       └── App.jsx         # React dashboard
 ├── .env.example            # Environment variable template
 ├── .gitignore
 └── README.md
@@ -218,7 +199,6 @@ pi-weather-etl/
 | AWS API Gateway | $0/month (free tier) |
 | Neon PostgreSQL | $0/month (free tier) |
 | Netlify | $0/month (free tier) |
-| Grafana Cloud | $0/month (free tier) |
 | ntfy.sh alerts | $0/month |
 | Electricity (~3W) | ~$2-3/month |
 | **Total ongoing** | **~$2-3/month** |
@@ -253,8 +233,8 @@ NTFY_TOPIC=your-unique-topic-name
 - **Database Design** — PostgreSQL schema design, views, indexes
 - **Python** — sensor I/O, HTTP clients, data transformation, error handling
 - **Infrastructure** — Linux cron scheduling, SSH, environment configuration
-- **Frontend** — React, Recharts, responsive dashboard design
-- **DevOps** — CI/CD with Netlify, AWS CLI deployment, Git version control
+- **Visualization** — Grafana Cloud dashboards, time series analysis
+- **DevOps** — AWS CLI deployment, Git version control
 - **IoT** — Raspberry Pi hardware integration, I2C sensors
 - **Monitoring** — real-time alerting, logging, CloudWatch
 
