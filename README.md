@@ -5,7 +5,7 @@
 
 ## 📸 Dashboard Preview
 
-![Grafana Dashboard](docs/grafana_screenshot.png)
+![Grafana Dashboard](docs/grafanapi.png)
 
 ---
 
@@ -217,7 +217,7 @@ API_URL=https://YOUR_API_ID.execute-api.us-east-1.amazonaws.com/prod/ingest
 DEVICE_ID=pi-001
 LOCATION=attic
 
-# Alerts
+# Alerts (ntfy.sh)
 NTFY_TOPIC=your-unique-topic-name
 
 # Database (set in AWS Lambda console, not here)
@@ -242,7 +242,9 @@ NTFY_TOPIC=your-unique-topic-name
 
 ## 🔮 Planned Improvements
 
+- [ ] dbt for data transformation layer
 - [ ] Apache Airflow for pipeline orchestration
+- [ ] Databricks ML model for rain prediction
 - [ ] Home Assistant integration
 - [ ] Multiple Pi device support
 - [ ] Historical weather API comparison
@@ -258,4 +260,3 @@ MIT License — feel free to use this project as a template for your own sensor 
 ## 👤 Author
 
 **Cameron** — [@MYDUSTYVISION](https://github.com/MYDUSTYVISION)
-**Claude** - Debugging and notation
