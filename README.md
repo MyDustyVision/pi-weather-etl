@@ -242,9 +242,6 @@ NTFY_TOPIC=your-unique-topic-name
 
 ## 🔮 Planned Improvements
 
-- [ ] dbt for data transformation layer
-- [ ] Apache Airflow for pipeline orchestration
-- [ ] Databricks ML model for rain prediction
 - [ ] Home Assistant integration
 - [ ] Multiple Pi device support
 - [ ] Historical weather API comparison
@@ -260,3 +257,4 @@ MIT License — feel free to use this project as a template for your own sensor 
 ## 👤 Author
 
 **Cameron** — [@MYDUSTYVISION](https://github.com/MYDUSTYVISION)
+**Claude:Fabel** - Dabugging and notation
